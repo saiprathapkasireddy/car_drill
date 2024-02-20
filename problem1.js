@@ -1,11 +1,15 @@
-let inventory=require("./data.js");
+//let inventory=require("./data.js");
 
-function carDetails(object,id){
-    for(let car of object){
+function findCarByID(arr,id){
+    if(Array.isArray(arr)&&id){
+    for(let car of arr){
         if (car.id===id){
             return `car ${id} is a ${car.car_year} ${car.car_make} ${car.car_model}`
         }
     }
+}
 };
 
-console.log(carDetails(inventory,33));
+module.exports=findCarByID;
+
+//console.log(carDetails(inventory,33));
