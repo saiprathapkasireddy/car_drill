@@ -1,6 +1,7 @@
-let inventory=require("./data.js");
+//let inventory=require("./data.js");
 
 function carsOlderThanYear(arr,year){
+    if(Array.isArray(arr)&&year){
     let older_cars=[];
     for(let car of arr){
         if(car.car_year<year){
@@ -9,6 +10,9 @@ function carsOlderThanYear(arr,year){
         }
     }
     return older_cars.length;
+}
 };
 
-console.log(carsOlderThanYear(inventory,2000));
+module.exports=carsOlderThanYear;
+
+//console.log(carsOlderThanYear(inventory,2000));
