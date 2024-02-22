@@ -2,14 +2,16 @@
 
 function findCarByID(arr,id){
     if(Array.isArray(arr)&&id){
-    for(let car of arr){
-        if (car.id===id){
-            return `car ${id} is a ${car.car_year} ${car.car_make} ${car.car_model}`
+    let res="";
+    arr.forEach((element)=>{
+        if(element.id===id){
+            res=`car ${id} is a ${element.car_year} ${element.car_make} ${element.car_model}`
         }
-    }
+    });
+    return res;
 }
 };
 
 module.exports=findCarByID;
 
-//console.log(carDetails(inventory,33));
+//console.log(findCarByID(inventory,50));
