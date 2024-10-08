@@ -1,15 +1,19 @@
-//let inventory=require("./data.js");
+let inventory=require("./data.js");
 
 function lastCar(arr){
     if(Array.isArray(arr)){
-    for(let car of arr){
-        if(car.id===arr.length){
-            return `last car is a ${car.car_make} ${car.car_model}`
-        }
+        let res='';
+        arr.forEach((element)=>{
+            if(element.id===arr.length){
+                res=`The last car is a ${element.car_make} ${element.car_model}`
+            }
+        });
+        return res;
+    
     }
 }
-}
+
 
 module.exports=lastCar;
 
-//console.log(lastCar(inventory));
+console.log(lastCar(inventory));

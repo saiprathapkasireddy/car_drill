@@ -2,13 +2,11 @@
 
 function carsOlderThanYear(arr,year){
     if(Array.isArray(arr)&&year){
-    let older_cars=[];
-    for(let car of arr){
-        if(car.car_year<year){
-            older_cars.push(car.car_model)
-
+    let older_cars=arr.filter((element)=>{
+        if(element.car_year<year){
+            return element;
         }
-    }
+    })
     return older_cars.length;
 }
 };

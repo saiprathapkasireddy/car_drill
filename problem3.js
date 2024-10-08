@@ -2,12 +2,11 @@
 
 function carModels(arr){
     if(Array.isArray(arr)){
-    let car_models=[];
-    for(let car of arr){
-        car_models.push(car.car_model);
-    }
+    let car_models=arr.map((element)=>{
+        return element.car_model;
+    });
     car_models.sort();
-    return car_models
+    return car_models;
 }
 };
 
